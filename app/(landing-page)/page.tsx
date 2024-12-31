@@ -56,15 +56,6 @@ export default function Home() {
             Go to Dashboard
           </Link>
         )}
-
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <Download size={16} />
-          Download
-        </Link>
       </div>
 
       <div className="max-w-4xl py-8">

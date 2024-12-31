@@ -63,6 +63,11 @@ export default function Page() {
         signupData
       );
 
+      toast({
+        title: "Account created successfully",
+        description: "Sending verify email...",
+      });
+
       await axios.post(
         `${process.env.NEXT_PUBLIC_BACKEND_BASE_URL}/auth/verify`,
         {
@@ -72,7 +77,7 @@ export default function Page() {
       setIsLoading(false);
 
       toast({
-        title: "Account created successfully",
+        title: "Verify email sended successfully",
         description: "Please verify your account",
       });
 
