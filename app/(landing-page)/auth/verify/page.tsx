@@ -47,6 +47,8 @@ export default function RequestVerifyPage() {
 
       router.push("/auth/verify/success");
     } catch (error) {
+      setIsLoading(false);
+
       if (axios.isAxiosError(error)) {
         console.log(error.response?.data);
 

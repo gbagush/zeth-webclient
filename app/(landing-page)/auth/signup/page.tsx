@@ -83,6 +83,8 @@ export default function Page() {
 
       router.push("/auth/verify/success");
     } catch (error) {
+      setIsLoading(false);
+
       if (axios.isAxiosError(error)) {
         toast({
           title: "Failed create account",

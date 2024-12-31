@@ -48,6 +48,8 @@ export default function RequestVerifyPage() {
 
       router.push("/auth/reset-password/success");
     } catch (error) {
+      setIsLoading(false);
+
       if (axios.isAxiosError(error)) {
         console.log(error.response?.data);
 
